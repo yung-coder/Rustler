@@ -1,5 +1,5 @@
 fn main() {
-    let number = 13;
+    let number = 5;
     println!("Tell me about {}", number);
     match number {
         1 => println!("One!"),
