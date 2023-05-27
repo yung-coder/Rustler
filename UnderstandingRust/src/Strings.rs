@@ -1,3 +1,5 @@
+use std::collections::HashMap;
+
 fn main() {
     // (all the type annotations are superfluous)
     // A reference to a string allocated in read only memory
@@ -39,4 +41,29 @@ fn main() {
 
     println!("Alice says: {}", alice);
     println!("Bob says: {}", bob);
+
+    // deep one
+
+    let yo1 = String::from("Hello, ");
+    let yo2 = String::from("world!");
+    let yo3 = yo1 + &yo2;
+
+    println!("{}", yo3); // cannot print as ownership is transfered
+
+    let blue = String::from("Blue");
+    let yellow = String::from("yellow");
+
+    let mut scores = HashMap::new();
+
+    scores.insert(blue, 10);
+    scores.insert(yellow, 50);
+
+    let tname = String::from("Blue");
+    let score = scores.get(&tname);
+
+    println!("Value is  {:?}", score);
+
+    for (Key, value) in &scores {
+        println!("{} {}", Key, value);
+    }
 }
