@@ -3,7 +3,7 @@ use std::collections::HashMap;
 fn main() {
     // (all the type annotations are superfluous)
     // A reference to a string allocated in read only memory
-    let pangram: &'static str = "the quick brown fox jumps over the lazy dog";
+    let pangram: &'static str = "Exams on leave";
     println!("Pangram: {}", pangram);
 
     // Iterate over words in reverse, no new string is allocated
