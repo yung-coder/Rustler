@@ -3,7 +3,7 @@ use std::{thread, time::Duration};
 fn main() {
     let handel = thread::spawn(|| {
         for i in 1..10 {
-            println!("hi number {} from spawned no rustling", i);
+            println!("hi number rusty {} from spawned no rustling", i);
             thread::sleep(Duration::from_millis(1));
         }
     });
