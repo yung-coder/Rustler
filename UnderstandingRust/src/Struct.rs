@@ -42,7 +42,7 @@ fn main() {
 
     println!("Rect {:#?}", rect);
 
-    println!("hold {}", rect.can_hold(&rect1));
+    println!("hold the value  {}", rect.can_hold(&rect1));
 
     println!("can hold {}", rect.can_hold(&rect2));
 
