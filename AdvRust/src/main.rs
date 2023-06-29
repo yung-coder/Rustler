@@ -1,3 +1,3 @@
 fn main() {
-    println!("Adv rust");
+    println!("Adv rust keep low  priority");
 }
