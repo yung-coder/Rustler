@@ -12,4 +12,18 @@ fn main() {
     let w3 = w1 + w2.as_str();
     assert_eq!(w3, "hello,world");
     println!("{}", w1);
+
+    // slice
+
+    let arr = [1, 2, 3, 4, 5];
+
+    let slice = &arr[1..4];
+    assert_eq!(slice, &[2, 3, 4]);
+
+    println!("Final done");
+
+    let t = ("i", "am", "sunface");
+    assert_eq!(t.2, "sunface");
+
+    println!("Done tuple");
 }
