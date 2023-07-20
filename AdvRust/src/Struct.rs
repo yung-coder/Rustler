@@ -26,3 +26,10 @@ fn main() {
 
     println!("ALL good");
 }
+
+// option enum
+
+enum Option<T> {
+    None,
+    Some(T),
+}
