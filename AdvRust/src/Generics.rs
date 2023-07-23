@@ -8,6 +8,10 @@ fn sum<T: std::ops::Add<Output = T>>(a: T, b: T) -> T {
     a + b
 }
 
+fn multiply<T: std::ops::Mul<Output = T>>(a: T, b: T) -> T {
+    a * b
+}
+
 fn main() {
     assert_eq!(5, sum(2i8, 3i8));
     assert_eq!(50, sum(20, 30));
