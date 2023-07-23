@@ -26,4 +26,8 @@ fn main() {
     assert_eq!(t.2, "sunface");
 
     println!("Done tuple");
+
+    let s = "Twitter is now X";
+
+    let elon = utf8_slice::slice(s, 4, 5);
 }
