@@ -1,3 +1,5 @@
+use std::collections::HashMap;
+
 fn main() {
     let mut v1 = Vec::from([1, 2, 4]);
     v1.pop();
@@ -25,4 +27,16 @@ fn main() {
     assert_eq!(slice3, &[1, 2, 3, 4]);
 
     println!("Done too");
+
+    // hash ownership
+
+    let v4 = 10;
+
+    let v5 = "hello".to_string();
+    let mut m2 = HashMap::new();
+    m2.insert(v5.clone(), v4);
+
+    assert_eq!(v5, "hello");
+
+    println!("Map done");
 }
