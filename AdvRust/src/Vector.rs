@@ -39,4 +39,8 @@ fn main() {
     assert_eq!(v5, "hello");
 
     println!("Map done");
+
+    // Going to restart learning rust again 
+    // Run 3 soon 
+    // Using Rust to build complex and robust apps 
 }
