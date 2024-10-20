@@ -20,6 +20,12 @@ fn main() {
     let first = get_first(sen); 
     print!("First word is: {}", first);
 
+
+    let a = 32;
+    let b = 34;
+    let sum = do_sum(a , b);
+    println!("Sum is {}", sum);
+
 }
 
 
@@ -34,4 +40,9 @@ fn get_first(sen: String) -> String {
         }
     }
     return  ans;
+}
+
+
+fn do_sum(a: i32 , b: i32) -> i32 {
+    return a + b;
 }
