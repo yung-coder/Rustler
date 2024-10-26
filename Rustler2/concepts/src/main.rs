@@ -48,3 +48,7 @@ fn do_sum(a: i32 , b: i32) -> i32 {
 }
 
 // recap pluss final lap
+
+//{} --> dynamically getting vars  
+
+// recap of basics done now specfic concepts and advance concepts
