@@ -51,4 +51,15 @@ fn do_sum(a: i32 , b: i32) -> i32 {
 
 //{} --> dynamically getting vars  
 
-// recap of basics done now specfic concepts and advance concepts
+// recap of basics done now specfic concepts and advance concepts 
+
+// Structs 
+
+// struct example 
+
+struct User {
+    active: bool,
+    username: String,
+    email: String,
+    sign_in_count: u64,
+}
