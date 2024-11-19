@@ -81,6 +81,11 @@ impl Rect {
     }
 }
 
+enum Shape {
+    Rectangle(f64 , f64),
+    Circle(f64),
+}
+
 fn main() {
     let rect1 = Rect {
         width: 10,
@@ -89,4 +94,16 @@ fn main() {
 
     println!("area is {}", rect1.area());
     println!("area is {}", rect1.perimeter());
+
+    let rect = Shape::Rectangle(1.0, 2.0);
+    calculate(shape: rect);
+}
+
+fn calculate(shape: Shape){
+    // pattern matching syntax
+    let area = match shape {
+        Shape::Rectangle(a, b) => a *b,
+        Shape::Circle(r) => 3.14 * r *r,
+    };
+    return area;
 }
