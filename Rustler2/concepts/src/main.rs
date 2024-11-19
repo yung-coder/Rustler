@@ -97,6 +97,22 @@ fn main() {
 
     let rect = Shape::Rectangle(1.0, 2.0);
     calculate(shape: rect);
+
+    let index = find(String::from("preet"));
+
+    match index {
+        Some(value) => println!("index is {}" , value),
+        None => println!("a not found"),
+    }
+
+    // Result 
+
+    let result = read_to_string(path: "a.txt");
+
+    match result {
+        Ok(data) => println!("{}", data),
+        Err(err) => println!("Error while  reading"),
+    }
 }
 
 fn calculate(shape: Shape){
@@ -107,3 +123,16 @@ fn calculate(shape: Shape){
     };
     return area;
 }
+
+fn find(s: String) -> Option<i32> {
+    for(index, char) in s.chars().enumrate() {
+        if (char == 'a'){
+            return Some(index as i32)
+        }
+    }
+
+    return None;
+}
+
+use std::fs::read_to_string;
+
