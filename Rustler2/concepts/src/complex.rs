@@ -28,4 +28,15 @@ fn do_some(s2: &string) {
     println!("{}" , s2)
 }
 
-// At any given time you can have either one mutable refernce or any number of immutabl references 
+// At any given time you can have either one mutable refernce or any number of immutabl references  
+
+
+// Vectors
+
+let main() {
+    let  mut vec = Vec::new();
+    vec.push(1);
+    vec.push(2);
+
+    println!("{:?}", vec);
+}
