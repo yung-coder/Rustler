@@ -69,3 +69,82 @@ fn main(){
         None => println!("User not found in the db");
     }
 }
+
+// Iterators 
+
+// iterating over for loops 
+
+// mutable iterator 
+
+fn main(){
+    let mut v1 = vec![1, 2, 3];
+
+    let v1_iter = v1.iter_mut(); // mutable iterator 
+
+    for val in v1_iter {
+        *val = *val + 1
+    }
+
+    println!("{:?}" ,v1);
+}
+
+
+// iterators .next 
+
+
+fn main(){
+    let mut v1 = vec![1, 2, 3];
+
+    let mut v1_iter = v1.iter_mut()
+
+    while let Some(val) = v1_iter.next() {
+        println!("{}", val);
+    }
+
+    println!("{:?}" ,v1);
+}
+
+
+// IntoIter -- this is by default 
+
+fn main(){
+    let mut v1 = vec![1, 2, 3];
+
+    let v1_iter = v1.into_iter(); // takes the owenership  
+
+    for val in v1_iter {
+       println!("{}", val);
+    }
+
+    println!("{:?}" ,v1); // v1 becomes invalid 
+}
+
+
+// Iterators adapters -- dose not return 
+
+fn main() {
+    let v1 = vec![1,2,3];
+
+    let v1_iter = v1.iter();
+
+    let sum: i32 = v1_iter.sum(); // ownership moved 
+
+    println!("Sum is {}" , sum);
+}
+
+
+// Iterators adapters --  return 
+
+fn main() {
+    let v1 = vec![1,2,3];
+
+    let v1_iter = v1.iter();
+
+    let v1_iter2 = v1_iter.map(|x| x +1);
+
+    for i in v1_iter2 {
+        println!("{}", i);
+    }
+
+    println!("{:?}" ,v1);
+}
