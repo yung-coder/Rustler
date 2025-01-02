@@ -148,3 +148,24 @@ fn main() {
 
     println!("{:?}" ,v1);
 }
+
+// Slices 
+
+fn main(){
+    let mut word = String::from("new");
+    let word2 = find_first(&word);
+    println!("{}", word);
+}
+
+
+fn find_first(word: String) -> &str {
+    let mut index = 0;
+    for (_, i) in words.chars().enumerate() {
+        if i == ' ' {
+            break;
+        }
+        index = index + 1;
+    }
+
+    return &word[0..index];
+}
