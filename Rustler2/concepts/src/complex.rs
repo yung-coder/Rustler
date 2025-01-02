@@ -52,3 +52,20 @@ fn even(vec: Vec<i32>) -> Vec<i32> {
 
     return new_vec
 }
+
+
+// hashmaps 
+
+fn main(){
+    let mut users: HashMap<String, u32> = HashMap::new();
+
+    users.insert(k:String::from("chad"), v:22);
+    users.insert(k:String::from("me"), v:32);
+
+    let first_user_age = users.get("chad"); //Option<22>
+
+    match first_user_age {
+        Some(age) => println!("age is {}", age);
+        None => println!("User not found in the db");
+    }
+}
