@@ -250,3 +250,5 @@ fn main(){
     let value = rx.recv().unwrap();
     println!("{}", value);
 }
+
+// Rust bootcamp completed only async rust left 
