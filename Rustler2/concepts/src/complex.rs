@@ -215,3 +215,26 @@ fn longest<'a>(str1: &'a str, str2: &'a str) -> &'a str {
         return str2;
     }
 }
+
+// threads 
+
+fn main() {
+    thread::spaawn(|| {
+        let mut c = 0;
+        for i in 0..500000000{
+            for i in 0..5000000000{
+                c = c + 1;
+                c = c - 1;
+            }
+        }
+    });
+
+
+    let mut c =0;
+    for i in 0..5000000{
+        for i in 0..50000000{
+            c = c + 1;
+            c = c - 1;
+        }
+    }
+}
