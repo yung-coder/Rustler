@@ -272,3 +272,6 @@ async fn my_funtion(){
 async fn read() -> String {
     "DB".to_owned();
 }
+
+
+// rust learning completed now project building 
