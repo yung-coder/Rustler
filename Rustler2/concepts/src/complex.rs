@@ -252,3 +252,23 @@ fn main(){
 }
 
 // Rust bootcamp completed only async rust left 
+
+
+// async awwait 
+
+
+#[tokio::main] // async runtime 
+
+async fn main(){
+  my_funtion().await;
+}
+
+async fn my_funtion(){
+    println!("I am async function");
+    let s1 = read().await;
+    let s2 = read().await;
+}
+
+async fn read() -> String {
+    "DB".to_owned();
+}
