@@ -275,3 +275,4 @@ async fn read() -> String {
 
 
 // rust learning completed now project building 
+// projects 
